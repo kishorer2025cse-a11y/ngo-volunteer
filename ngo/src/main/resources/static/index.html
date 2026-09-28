@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>NGO Volunteer Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>NGO Volunteer Sign-up &amp; Event Tracker</h1>
+    <p id="msg"></p>
+
+    <div class="card">
+        <h2>Add Event</h2>
+        <input id="ename" placeholder="Event name">
+        <input id="edate" type="date">
+        <input id="eloc" placeholder="Location">
+        <input id="ecap" type="number" placeholder="Capacity">
+        <button onclick="addEvent()">Add Event</button>
+    </div>
+
+    <div class="card">
+        <h2>Events</h2>
+        <table>
+            <thead><tr><th>ID</th><th>Name</th><th>Date</th><th>Location</th><th>Capacity</th></tr></thead>
+            <tbody id="events"></tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>Volunteer Sign-up</h2>
+        <input id="vname" placeholder="Name">
+        <input id="vemail" placeholder="Email">
+        <select id="vevent"></select>
+        <button onclick="signup()">Register</button>
+    </div>
+
+    <div class="card">
+        <h2>Attendance</h2>
+        <select id="aevent" onchange="loadVolunteers()"></select>
+        <table>
+            <thead><tr><th>Name</th><th>Email</th><th>Status</th><th>Hours</th><th>Mark</th></tr></thead>
+            <tbody id="volunteers"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
